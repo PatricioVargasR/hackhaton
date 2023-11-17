@@ -1,0 +1,58 @@
+.navbar-color{
+    background-color:rgb(212, 184, 145);
+}
+
+.pr20{
+    padding-right: 20px;
+}
+
+.navigation{
+    display: flexbox;
+    width: 30%;
+    padding-left: 4%;
+}
+
+.navigation-color{
+    background-color: rgb(201, 201, 201);
+}
+
+.profile-picture{
+    display: flexbox;
+    width: 200px; /* Ancho del círculo */
+    height: 200px; /* Altura del círculo */
+    background-color: #3498db; /* Color de fondo del círculo */
+    border-radius: 50%;
+}
+
+.container1{
+    display: flex;
+    justify-content: center; /* Centra los hijos horizontalmente */
+    align-items: center; /* Centra los hijos verticalmente */
+    height: 200px; /* Altura del contenedor padre */
+
+}
+
+.box{
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    order: 1;
+    width: 50%;
+}
+
+.user{
+    order: 2;
+    width: 50%;
+}
+
+
+.web-loge{
+    width:230px;
+    height:90px;
+    padding-left:0.5cm;
+}
