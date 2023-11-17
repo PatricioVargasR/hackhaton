@@ -48,8 +48,8 @@ CREATE TABLE admins(
 DROP TABLE IF EXISTS productos;
 CREATE TABLE productos(
     id_productos INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    id_categoria INTEGER(11) NOT NULL,
     nombre_producto VARCHAR(150) NOT NULL,
-    categoria VARCHAR(150) NOT NULL,
     precio_unitario FLOAT NOT NULL,
     sku VARCHAR(10) NOT NULL,
     imagen VARCHAR(250) NOT NULL,
@@ -58,6 +58,18 @@ CREATE TABLE productos(
     stock INTEGER(40) NOT NULL
 )ENGINE=INNODB;
 
+
+-- --- Categorias module tables ---
+
+DROP TABLE IF EXISTS categorias;
+CREATE TABLE categorias (
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(191) NOT NULL,
+    slug VARCHAR(191) NOT NULL,
+    descripcion TEXT DEFAULT NULL,
+    navbar_status TINYINT(1) DEFAULT 0,
+    status TINYINT(1) DEFAULT 0 COMMENT '0=visible, 1=hidden, 2=deleted'
+)ENGINE=INNODB;
 
 -- --- Carrito module tables ---
 
