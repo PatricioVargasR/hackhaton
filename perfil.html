@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta name="autor" content="@Rolando">
+        <meta charset="UTF-8">
+        <meta name="description" content="Editar forma de Pago">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link href="./mystyle.css" rel="stylesheet" >
+        <title>TIERRA TEJIDA</title>
+    </head>
+
+<body>
+
+    <header style="padding-bottom: 20px;">
+        <nav class="navbar-color"> 
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="./LOGO.png" class="web-loge">
+              </a>
+            </div>
+        </nav>
+    </header>
+        
+    <main style="display:flexbox; flex-direction: row;">
+
+        <div class="navigation">
+            <div class="navigation-color">
+                <a href=" "> Principal</a>
+                <span>/ Mi Perfil </span>
+            </div>
+        </div>
+        <div class="container1">
+
+            <div class="box logo" style="padding-left: 30%;">           
+                <img src="SERVICES.jpg" alt="Foto de perfil" class="profile-picture rounded-circle" onclick="abrirSelectorImagen()">
+            </div>
+
+
+            <div class="box user">
+
+                <h2>Datos Generales</h2>
+                <p>
+                    <span id="nombre">Nombre: Paulina </span>
+                    <a class="editable" onclick="editar('nombre')"> (Editar)</a>
+                </p>
+                <p>
+                    <span id="apellido-paterno">Apellido Paterno: Tello</span>
+                    <a class="editable" onclick="editar('apellido-paterno')"> (Editar)</a>
+                </p>
+                <p>
+                    <span id="apellido-materno">Apellido Materno: Perez</span>
+                    <a class="editable" onclick="editar('apellido-materno')"> (Editar)</a>
+                </p>
+                <p>
+                    <span id="edad">Edad: 23</span>
+                    <a class="editable" onclick="editar('edad')"> (Editar)</a>
+                </p>
+                <p>
+                    <span id="ubicacion">Ubicación: Tulancingo, Hidalgo</span>
+                    <a class="editable" onclick="editar('ubicacion')"> (Editar)</a>
+                </p>
+                <h2>Formas de Pago</h2>
+                <p>
+                    <span id="forma-pago">Tarjeta de Crédito: **** **** **** 1234</span>
+                    <a class="editable" onclick="irAFormaPago()"> (Editar)</a>
+                </p>
+            
+                <div id="formulario-edicion" style="display: none;">
+                    <label for="numero-de-tarjeta">Nuevo valor:</label>
+                    <input type="text" id="numero-de-tarjeta">
+                    <button onclick="guardarEdicion()">Guardar</button>
+                </div>
+            
+                <input type="file" accept="image/*" id="input-imagen" onchange="cambiarImagen()" style="display: none;">
+            </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+<script src="./script.js" >
+</script>
+</html>
+
+
