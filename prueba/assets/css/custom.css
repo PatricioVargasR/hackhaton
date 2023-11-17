@@ -1,0 +1,409 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;    
+}
+    body{
+        background: #f7f7f7;
+    }
+
+            .underline{
+                height: 4px;
+                width: 50px;
+                background-color: red;
+                margin-bottom: 20px;
+            }
+ 
+            .paginainicio{
+                height: 100%;
+                width: 100%;
+                position: relative;
+                background-position: center 65%;
+                background-size: cover;
+                background-repeat:no-repeat;	
+            }
+                .paginainicio::before{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.2);
+                }
+            .paginainicio .contenido{
+                display: flex;
+                height: 85%;
+                z-index: 3;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                
+            }
+                .paginainicio .contenido h1{
+                    font-size: 60px;
+                    font-weight: 700;
+                    margin-bottom: 10px;
+                }
+            .paginainicio .contenido .texto{
+                margin-bottom: 50px;
+                color: #fff;
+                font-size: 20px;
+                /* text-align: center; */
+                text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+            }
+                .contenido a{
+                    color: #000;
+                    display: block;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    margin: 0 10px;
+                    padding: 10px 30px;
+                    border-radius: 5px;
+                    background: #fff;
+                    border: 2px solid #fff;
+                    transition: 0.4s ease;
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+                    text-decoration: none; 
+                                       
+                }
+                    .contenido a:hover{
+                        color: #fff;
+                        background: rgba(255, 255, 255, 0.3);
+                    }
+        section {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 80px 0 0;
+        }                   
+            section h2 {
+                font-size: 2rem;
+            }
+                      
+            section > p {
+                text-align: center;
+            }
+                section .cartas{
+                    display: flex;
+                    flex-wrap: wrap;
+                    max-width: 1200px;
+                    margin-top: 50px;
+                    padding: 0 10px;
+                    justify-content: space-between;
+                }
+                section .nosotros{
+                    margin: 0 auto;
+                    max-width: 1200px;
+                }
+                    .servicios{
+                        background: #f7f7f7;
+                    }
+                    .nosotros .compañia-info{
+                        margin-top: 30px;
+                    }
+                    .nosotros h3{
+                        margin: 30px 0 10px;
+                    }
+                    .nosotros .equipo{
+                        text-align: left;
+                        width: 100%;
+                    }
+                        .nosotros .equipo ul{
+                            padding-left: 20px;
+                        }
+                section .cartas .carta{
+                    background: #fff;
+                    padding: 40px 15px;
+                    list-style: none;
+                    border-radius: 5px;
+                    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+                    margin-bottom: 40px;
+                    width: calc(100% / 3 - 30px);
+                    text-align: center;
+                }
+                    .portafolio .cartas .carta{
+                        padding: 0 0 20px;
+                    }
+                    .servicios .carta img{
+                        width: 100%;
+                        /* margin-bottom: 20px; */
+                        border-radius: 5%;
+                        object-fit: cover;  
+                    }
+                    .portafolio .carta img{
+                        width: 100%;
+                        padding-bottom: 10px;
+                        aspect-ratio: 16 / 9;
+                        object-fit: cover;
+                        border-radius: 7px;
+                    }
+                        .cartas .carta p{
+                            padding: 0 15px;
+                            margin-top: 5px;
+                        }
+                     .nosotros .fila{
+                        padding: 0 10px;
+                     }
+                     .contacto .fila{
+                        margin: 60px 0 90px;
+                        display: flex;
+                        max-width: 1200px;
+                        width: 100%;
+                        align-items: center;
+                        justify-content: space-between;
+                     }
+                     .contacto .fila .columna{
+                        padding: 0 10px;
+                        width: calc(100% / 2 - 50px);
+                     }
+                     .contacto .columna p {
+                        margin-bottom: 10px;
+                     }
+                     .contacto .columna p{
+                       margin-bottom: 10px;
+                     }
+                     .contacto .columna p i{
+                        color: #7a7a7a;
+                        margin-right: 10px;
+                     }
+                        .contacto form input{
+                            height: 45px;
+                            margin-bottom: 20px;
+                            padding: 10px;
+                            width: 100%;
+                            font-size: 16px;
+                            outline: none;
+                            border: 1px solid #bfbfbf;
+                        }
+                        .contacto form textarea {
+                            padding: 10px;
+                            width: 100%;
+                            font-size: 16px;
+                            height: 150px;
+                            outline: none;
+                            resize: vertical;
+                            border: 1px solid #bfbfbf;
+                          }
+                          
+                          .contacto form button {
+                            margin-top: 10px;
+                            padding: 10px 20px;
+                            font-size: 17px;
+                            color: #fff;
+                            border: none;
+                            cursor: pointer;
+                            border-radius: 5px;
+                            background: #333;
+                            transition: 0.2s ease;
+                          }
+                            .contacto form button:hover{
+                                background-color: #525252;
+                            } 
+        footer{
+            bottom: 0px;
+            width: 100%;
+            background: #EEEEEE;
+        }
+            .contenido-main{
+                display: flex;
+            }
+                .contenido-main .caja{
+                    flex-basis: 50%;
+                    padding: 10px 20px;
+                }
+                    .caja h2{
+                        font-size: 1.125rem;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                    }
+                    .caja .contenido{
+                        margin: 20px 0 0 0;
+                        position: relative;
+                    }
+                    .caja .contenido:before{
+                        position: absolute;
+                        content: '';
+                        top: -10px;
+                        height: 2px;
+                        width: 100%;
+                        background: #1a1a1a;
+                    }
+                    .caja .contenido:after{
+                        position: absolute;
+                        content: '';
+                        top: -10px;
+                        height: 2px;
+                        width: 15%;
+                        background: #9D2449;
+                    }
+                .izquierda .contenido p{
+                    text-align: justify;
+                }
+                    .izquierda .contenido .social{
+                        margin: 20px 0 0 0;
+                    }
+                        .izquierda .contenido .social a{
+                            padding: 0 2px;
+                        }
+                            .izquierda .contenido .social a{
+                                /*
+                                height: 40px;
+                                width: 40px;
+                                */
+                                background: white;
+                                line-height: 40px;
+                                text-align: center;
+                                font-size: 18px;
+                                border-radius: 5px;
+                                transition: 0.3s;
+                                margin: 5px;
+                            }
+                                .izquierda .contenido .social a:hover{
+                                    background: #f12020;
+                                }
+                                
+                .central .contenido .fas{
+                    font-size: 1.4375rem;
+                    height: 45px;
+                    width: 45px;
+                    line-height: 45px;
+                    text-align: center;
+                    border-radius: 50%;
+                    transition: 0.3s;
+                    cursor: pointer;
+                }
+                    .central .contenido .fas:hover{
+                        background: #FAFAFA;
+                        }
+                .central .contenido .texto{
+                    font-size: 1.0625rem;
+                    font-weight: 500;
+                    padding-left: 10px;
+                }
+                .central .contenido .telefono{
+                    margin: 15px 0;
+                }
+                    .derecha form .texto{
+                        font-size: 1.0625rem;
+                        margin-bottom: 2px;
+                        color: black; 
+                    }
+                    .derecha form .msg{
+                        margin-top: 10px;
+                    }
+                    .derecha form input, .derecha form textarea{
+                        width: 100%;
+                        font-size: 1.0625rem;
+                        background: white;
+                        padding-left: 10px;
+                        border: 1px solid white;           
+                    }
+                        .derecha form input:focus,
+                        .derecha form textarea:focus{
+                            outline-color: #3498db;
+                        }
+                    .derecha form input{
+                        height: 35px;
+                    }
+                    .derecha form .btn{
+                        margin-top: 10px;
+                    }
+                        .derecha form .btn button{
+                            height: 40px;
+                            width: 100%;
+                            border: none;
+                            outline: none;
+                            background: #f12020;
+                            font-size: 1.0625rem;
+                            font-weight: 500;
+                            cursor: pointer;
+                            transition: .3s;
+                        }
+                            .derecha form .btn button:hover{
+                                background: white;
+                            }
+                .boton center{
+                    padding: 5px;
+                    font-size: 0.9375rem;
+                    background: #9D2449;
+                }
+                .boton center span{
+                    color: white;
+                }  
+                .boton center a{
+                    color: #f12020;
+                    text-decoration: none;
+                }
+                    .boton center a:hover{
+                        text-decoration: underline;
+                    }
+
+/*Estilos responsivos*/
+
+@media screen and (max-width: 860px){
+
+    section > p{
+        text-align: center;
+    }
+
+    section .cartas .carta{
+        width: calc(100%/2 - 160);
+        margin-bottom: 30px;
+    }
+
+    .paginainicio .contenido h1{
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    .paginainicio .contenido .texto{
+        font-size: 17px;
+    }
+
+    .contenido a{
+        font-size: 17px;
+        padding: 9px 20px;
+    }
+
+    .contacto .fila{
+        flex-direction: column;
+    }
+
+    .contacto .fila .columna{
+        width: 100%;
+    }
+
+    .contacto .fila .columna:last-child{
+        margin-top: 40px;
+    }
+
+}
+
+@media screen and (max-width: 560px) {
+    section .cartas .carta {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+ @media screen and (max-width: 900px) {
+    footer{
+      bottom: 0px;
+    }
+    .contenido-main{
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    .contenido-main .caja{
+      margin: 5px 0;
+    }
+  }
+         
