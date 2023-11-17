@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            cursor: pointer; /* Agregado para indicar que la imagen es clickeable */
+        }
+
+        .editable {
+            cursor: pointer;
+            color: #007bff;
+            text-decoration: underline;
+        }
+
+        .editable:hover {
+            text-decoration: none;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+    <title>Tu Aplicación Web</title>
+</head>
+<body>
+
+<div class="container">
+    <img src="SERVICES.jpg" alt="Foto de perfil" class="profile-picture" onclick="abrirSelectorImagen()">
+    <h2>Datos Generales</h2>
+    <p>
+        <span id="nombre">Nombre: Paulina </span>
+        <span class="editable" onclick="editar('nombre')"> (Editar)</span>
+    </p>
+    <p>
+        <span id="apellido-paterno">Apellido Paterno: Tello</span>
+        <span class="editable" onclick="editar('apellido-paterno')"> (Editar)</span>
+    </p>
+    <p>
+        <span id="apellido-materno">Apellido Materno: Perez</span>
+        <span class="editable" onclick="editar('apellido-materno')"> (Editar)</span>
+    </p>
+    <p>
+        <span id="edad">Edad: 23</span>
+        <span class="editable" onclick="editar('edad')"> (Editar)</span>
+    </p>
+    <p>
+        <span id="ubicacion">Ubicación: Tulancingo, Hidalgo</span>
+        <span class="editable" onclick="editar('ubicacion')"> (Editar)</span>
+    </p>
+    <h2>Formas de Pago</h2>
+    <p>
+        <span id="forma-pago">Tarjeta de Crédito: **** **** **** 1234</span>
+        <span class="editable" onclick="irAFormaPago()"> (Editar)</span>
+    </p>
+
+    <div id="formulario-edicion" style="display: none;">
+        <label for="numero-de-tarjeta">Nuevo valor:</label>
+        <input type="text" id="numero-de-tarjeta">
+        <button onclick="guardarEdicion()">Guardar</button>
+    </div>
+
+    <input type="file" accept="image/*" id="input-imagen" onchange="cambiarImagen()" style="display: none;">
+</div>
+
+<script>
+    let campoActual;
+
+    function editar(campo) {
+        campoActual = campo;
+        const valorActual = document.getElementById(campo).innerText.split(': ')[1];
+        document.getElementById('numero-de-tarjeta').value = valorActual;
+        document.getElementById('formulario-edicion').style.display = 'block';
+    }
+
+    function guardarEdicion() {
+        const nuevoValor = document.getElementById('numero-de-tarjeta').value;
+        document.getElementById(campoActual).innerText = campoActual.charAt(0).toUpperCase() + campoActual.slice(1) + ': ' + nuevoValor;
+        document.getElementById('formulario-edicion').style.display = 'none';
+    }
+
+    function abrirSelectorImagen() {
+        document.getElementById('input-imagen').click();
+    }
+
+    function cambiarImagen() {
+        const inputImagen = document.getElementById('input-imagen');
+        const imagenPerfil = document.querySelector('.profile-picture');
+
+        const file = inputImagen.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                imagenPerfil.src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        }
+    }
+
+    function irAFormaPago() {
+        // Redirige a la página de edición de forma de pago
+        window.location.href = 'editar_forma_pago.html';
+    }
+</script>
+
+</body>
+</html>
+
+
